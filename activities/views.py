@@ -6,6 +6,7 @@ from .permissions import IsOwner
 class ActivitiesView(viewsets.ModelViewSet):
     serializer_class = ActivitySerializer
     permission_classes = [permissions.AllowAny]
+    # permission_classes = [permissions.AllowAny, IsOwner]
     queryset = Activity.objects.all()
 
     # def get_queryset(self):
